@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\GymHandler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GymHandler::class,'index']);
+Route::get('/about',[GymHandler::class,'about']);
+Route::get('/packages',[GymHandler::class,'packages']);
+Route::get('/contact',[GymHandler::class,'contact']);
+Route::get('/gallery',[GymHandler::class,'gallery']);
+

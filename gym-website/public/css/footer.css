@@ -1,0 +1,32 @@
+.footer-wrapper{
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 30px;
+}
+li{
+    list-style: none;
+    font-size:19px;
+}
+a{
+   
+    text-decoration: none;
+    color:white;
+    
+}
+.brand-name{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+.star-gym{
+    text-align: center;
+    font-size: 100px;
+}
+@media only screen and (max-width: 768px) and (min-width: 200px) {
+
+    .brand-name{
+        height: 10vh!important;
+    }
+}
