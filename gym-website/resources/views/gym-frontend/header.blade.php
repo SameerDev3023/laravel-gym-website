@@ -53,15 +53,22 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{url('/gallery')}}">Gallery</a>
         </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a id="login" class="nav-link text-center" aria-current="page" href="#">
             <i class="fa fa-user" aria-hidden="true"></i>
             Login
           </a>
         </li>
+        <li class="nav-item">
+
+        <a id="signup" class="nav-link text-center" aria-current="page" href="#">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            Sign In
+          </a>
+        </li>
       </ul>
+
+      
     </div>
   </div>
 </nav>
@@ -77,14 +84,13 @@
     </div>
 </div>
 </header>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{{URL::asset('js/header-slider.js')}}"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
-    <script src="{{URL::asset('js/product-slider.js')}}"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

@@ -36,8 +36,8 @@
                 <img class="card-img" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" />
             </div>
             <div class="package-title ">
-                <h3 class="package-months bg-danger">3 Month Package</h3>
-                <p class="price bg-sucess"><del>₹6000</del> ₹4500</p>
+                <h3 class="package-months bg-danger">1 Month Package</h3>
+                <p class="price bg-sucess"><del>₹2500</del> ₹2000</p>
             </div>  
             <div class="card-text">
             Experience the ultimate convenience with our special 3-month Star Gym package. Get access to top-notch facilities, personalized training, and exclusive perks. Don't wait, seize this opportunity to transform your fitness journey today!
@@ -74,7 +74,7 @@
             <div class="but-btn-wrapper mt-2"><a href="#" class="buy-button btn btn-danger">Buy</a></div>
          </div>
         </div>
-    </div>
+    </div>  
 </div>
 
 
