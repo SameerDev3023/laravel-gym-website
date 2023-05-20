@@ -54,14 +54,14 @@
           <a class="nav-link active" aria-current="page" href="{{url('/gallery')}}">Gallery</a>
         </li>
         <li class="nav-item">
-          <a id="login" class="nav-link text-center" aria-current="page" href="#">
+          <a id="login" class="nav-link text-center" aria-current="page" href="{{url('/login')}}">
             <i class="fa fa-user" aria-hidden="true"></i>
             Login
           </a>
         </li>
         <li class="nav-item">
 
-        <a id="signup" class="nav-link text-center" aria-current="page" href="#">
+        <a id="signup" class="nav-link text-center" aria-current="page" href="{{url('/sign-up')}}">
             <i class="fa fa-user" aria-hidden="true"></i>
             Sign In
           </a>
@@ -80,7 +80,7 @@
         <br>Lifestyle
         </h1>
     <div class="buy-membership btn btn-danger rounded text-center">
-        Buy Membership
+       <a href="{{url('/packages')}}"> Buy Membership</a>
     </div>
 </div>
 </header>
