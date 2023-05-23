@@ -9,7 +9,7 @@ class AdminHandler extends Controller
     //
     public function admin_index()
     {
-        return view('gym-frontend/admin');
+        return view('gym-frontend/admin-main');
     }
     public function check(Request $request){
         $email = $request->input('email');
@@ -32,5 +32,8 @@ class AdminHandler extends Controller
     public function logout(){
         session()->forget('user_email');
         return redirect('/');
+    }
+    public function userOrders(){
+        return view('gym-frontend/your-order');
     }
 }

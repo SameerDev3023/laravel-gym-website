@@ -60,12 +60,17 @@
           </a>
         </li>
         <li class="nav-item">
-
-        <a id="signup" class="nav-link text-center" aria-current="page" href="{{url('/sign-up')}}">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            Sign In
+          <a id="cart-icon" class="nav-link text-center" aria-current="page" href="{{url('/shopping-cart')}}">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <?php
+            $cartValue = session()->get('cart_data');
+          
+        
+            ?>
+           <h6>{{$cartValue}}</h6>
           </a>
         </li>
+       
       </ul>
 
       

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GymHandler;
 use App\Http\Controllers\AdminHandler;
+use App\Http\Controllers\OrderHandler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,11 @@ Route::get('/sign-up',[GymHandler::class,'signUp']);
 Route::post('/sign-up',[GymHandler::class,'insert']);
 Route::get('/admin',[AdminHandler::class,'admin_index'])->middleware('loginCheck');
 Route::post('/check',[AdminHandler::class,'check']);
+Route::get('/admin/orders',[AdminHandler::class,'userOrders']);
 Route::get('/logout',[AdminHandler::class,'logout']);
+Route::get('/shopping-cart',[OrderHandler::class,'addToCart']);
+Route::post('/shopping-cart',[OrderHandler::class,'InsertToCart']);
+
 Route::get('/not-access',function(){
 return redirect('/');
 });

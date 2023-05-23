@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GymCrudHandler;
+use App\Models\shopping_bag;
 
 class GymHandler extends Controller
 {
     //
     public function index(){
         session()->forget('user_email');
+        $count = shopping_bag::count();
+        session()->put('cart_data',$count);
             return view('gym-frontend/home');
     }
     public function about(){
