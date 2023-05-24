@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GymHandler;
 use App\Http\Controllers\AdminHandler;
 use App\Http\Controllers\OrderHandler;
+use App\Http\Controllers\PaytmController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,12 +30,16 @@ Route::get('/admin/orders',[AdminHandler::class,'userOrders']);
 Route::get('/logout',[AdminHandler::class,'logout']);
 Route::get('/shopping-cart',[OrderHandler::class,'addToCart']);
 Route::post('/shopping-cart',[OrderHandler::class,'InsertToCart']);
-
+Route::get('/shopping-cart/remove/{id}',[OrderHandler::class,'RemoveToCart']);
+Route::get('/shopping-cart/buy',[OrderHandler::class,'OrderForm']);
 Route::get('/not-access',function(){
 return redirect('/');
 });
 
-
+//Paytm Payment
+Route::post('paytm-payment',[PaytmController::Class, 'paytmPayment'])->name('paytm.payment');
+Route::post('paytm-callback',[PaytmController::Class, 'paytmCallback'])->name('paytm.callback');
+// Route::get('paytm-purchase',[PaytmController::Class, 'paytmPurchase'])->name('paytm.purchase');
 
 
 

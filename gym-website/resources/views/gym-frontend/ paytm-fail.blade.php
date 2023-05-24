@@ -18,43 +18,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    @push('title')
-    <title>Cart</title>
-  </head>
-  <body>
-      <div class="container m-5">
-    <button type="button" class="btn btn-danger "><a href=
-    "{{url('/')}}" class="text-decoration-none text-white mt-2">Back</a></button>
-    <h1 class="text-center mb-5">Your Cart</h1>
-    <table class="table border-2 border-dark">
-        <thead>
-          <tr>
-            <th scope="col">Serial No</th>
-            <th scope="col">Package</th>
-            <th scope="col">Price</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-           
-          @foreach($cartData as $Data)
-          <tr>
-            <th scope="row">{{$Data['cart_items']}}</th>
-            <td>{{$Data['package_duration']}}</td>
-            <td>{{$Data['package_price']}}</td>
-            <td>
-      
-            <button type="button" class="btn btn-danger"><a href="{{url('shopping-cart/remove')}}/{{$Data['cart_items']}}" class="text-decoration-none text-white">Remove</a></button>
-            <button type="button" class="btn btn-success"><a href="{{url('/shopping-cart/buy')}}" class="text-decoration-none text-white">Buy Membership</a></button>
-      
-            </td>
-          </tr>
-          @endforeach
-        </tbody>
-      </table>
-</div>
-  
 
+    <title>Hello, world!</title>
+  </head>
+  <body class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+  <div class="alert alert-success alert-dismissible fade" role="alert">
+    <strong>Your Payment Has been failed</strong>
+</div>
+<a href="{{route('paytm.purchase')}}">Check the demo again</a>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
