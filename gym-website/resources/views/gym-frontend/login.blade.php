@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
     <link
@@ -34,20 +34,28 @@
   {!! Form::open(['url' => '/check']) !!}
             <div class="form-group p-3">
              {{Form::label('Email', 'Email', ['for' => 'email','class'=>'text-white',])}}
-             {{Form::text('email', '',['class'=>'form-control','placeholder'=>'Enter Your Email']);}}
+             {{Form::text('email', '',['class'=>'form-control','placeholder'=>'Enter Your Email','id'=>'email'])}}
+             {{Form::label('', '', ['for' => 'email','id'=>'error_messg_email'])}}
             </div>
             <div class="form-group p-3">
              {{Form::label('Password', 'Password', ['for' => 'address','class'=>'text-white'])}}
-             {{Form::text('password', '',['class'=>'form-control','placeholder'=>'Enter Your Password']);}}
-             {{Form::submit('Login!',['class'=>'btn btn-danger mt-4']);}}
-             </div>
-
+                <i id="show-pass" class="fa fa-eye" style="color:white;float
+                :right">
+                </i>
+             {{Form::password('password', ['class' => 'form-control','placeholder'=>'Enter Your Password','id'=>'password'])}}
+             {{Form::label('', '', ['for' => 'email','id'=>'error_messg_pass'])}}
+            </div>
+            <div style="margin-left:20px">
+              {{Form::submit('Login!',['class'=>'btn btn-danger','id'=>'submitForm'])}}
+            </div>
              <p class="text-center text-white">Don't Have An Account?<a href="{{url('/sign-up')}}"> Sign In</a></p>
              <p class="text-center text-white"><a href="{{url('/')}}" class="text-white"> Back</a></p>
             {!! Form::close() !!}
             </div>
             </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{URL::asset('js/login-form.js')}}"></script>
     <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
   </body>
 </html>

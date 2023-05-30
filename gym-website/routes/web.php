@@ -32,6 +32,8 @@ Route::get('/shopping-cart',[OrderHandler::class,'addToCart']);
 Route::post('/shopping-cart',[OrderHandler::class,'InsertToCart']);
 Route::get('/shopping-cart/remove/{id}',[OrderHandler::class,'RemoveToCart']);
 Route::get('/shopping-cart/buy',[OrderHandler::class,'OrderForm']);
+Route::post('/COD',[OrderHandler::class,'COD']);
+
 Route::get('/not-access',function(){
 return redirect('/');
 });

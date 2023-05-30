@@ -81,10 +81,6 @@
             {{Form::label('customer_pincode', 'Pincode', ['for' => 'address','class'=>'text-white'])}}
             {{Form::text('customer_pincode', '',['class'=>'form-control','placeholder'=>'Enter Your Pincode']);}}
             </div>
-            <div class="form-group p-3">
-            {{Form::label('customer_address', 'Address', ['for' => 'address','class'=>'text-white'])}}
-            {{Form::text('customer_address', '',['class'=>'form-control','placeholder'=>'Enter Your Password']);}}
-            </div>
 
 
       
@@ -131,7 +127,9 @@ $totalPrice = 0; // Variable to store the total package price
         <li class="list-group-item d-flex justify-content-between">
           <span>Total (INR)</span>
           <strong>₹{{$totalPrice}}</strong>
-         
+         @php
+                session()->put('total_price',$totalPrice)
+         @endphp
         </li>
       </ul>
 
@@ -157,7 +155,7 @@ $totalPrice = 0; // Variable to store the total package price
                     'width'=> 50
                 ],
                 [
-                    'name' => 'Cash On Delivery',
+                    'name' => 'Pay After Visit',
                     'logo' => 'https://png.pngtree.com/png-clipart/20210606/original/pngtree-cash-on-delivery-or-cod-icon-png-png-image_6388553.jpg',
                     'value' => 'COD',
                     'width'=> 50
