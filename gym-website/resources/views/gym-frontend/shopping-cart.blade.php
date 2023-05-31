@@ -45,13 +45,17 @@
             <td>
       
             <button type="button" class="btn btn-danger"><a href="{{url('shopping-cart/remove')}}/{{$Data['cart_items']}}" class="text-decoration-none text-white">Remove</a></button>
-            <button type="button" class="btn btn-success"><a href="{{url('/shopping-cart/buy')}}" class="text-decoration-none text-white">Buy Membership</a></button>
       
             </td>
           </tr>
           @endforeach
+          
         </tbody>
       </table>
+     
+
+       <div class="text-center"> <button type="button" class="btn btn-success"><a href="{{url('/shopping-cart/buy')}}" class="text-decoration-none text-white">Buy Membership</a></button></div>
+      
 </div>
   
 

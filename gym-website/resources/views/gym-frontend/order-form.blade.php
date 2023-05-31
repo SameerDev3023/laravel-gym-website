@@ -37,12 +37,12 @@
                 <h2 class="mt-4">⭐️ Billing Details ⭐️</h2>
             </div>
             <div class="form-group p-3">
-            {{Form::label('Name', 'Name', ['for' => 'name','class'=>'text-white',])}}
+            {{Form::label('customer_name', 'Name', ['for' => 'name','class'=>'text-white',])}}
             {{Form::text('customer_name', '',['class'=>'form-control','placeholder'=>'Enter Your Name']);}}
             </div>
 
             <div class="form-group p-3">
-            {{Form::label('Email', 'Email', ['for' => 'email','class'=>'text-white',])}}
+            {{Form::label('customer_email', 'Email', ['for' => 'email','class'=>'text-white',])}}
             {{Form::text('customer_email', '',['class'=>'form-control','placeholder'=>'Enter Your Email']);}}
             </div>
             <div class="form-group p-3">
@@ -58,7 +58,7 @@
             </div>
             <div class="form-group p-3">
             {{Form::label('customer_number', 'Number', ['for' => 'Number','class'=>'text-white',])}}
-            {{Form::text('customer_number', '',['class'=>'form-control','placeholder'=>'Enter Your Number']);}}
+            {{Form::number('customer_number', '',['class'=>'form-control','placeholder'=>'Enter Your Number']);}}
             </div>
             <div class="form-group p-3">
             {{Form::label('customer_country', 'Country', ['for' => 'country','class'=>'text-white',])}}
@@ -185,5 +185,7 @@ $totalPrice = 0; // Variable to store the total package price
 
     <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
   </body>
-  <script src="{{URL::asset('js/payment-method.js')}}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="{{URL::asset('js/order-form-validation.js')}}"></script>
+
 </html>

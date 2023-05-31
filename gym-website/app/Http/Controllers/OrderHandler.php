@@ -40,20 +40,7 @@ class OrderHandler extends Controller
         }
     }
 
-    public function OrderForm(Request $request){
-
-        $url = $request->all();
-        // echo'<pre>';
-        // print_r($url);
-        // $url ="";
-        // if($paymentMethod['payment_option']=='paytm'){
-        //     $url=url('/paytm-payment');
-        // } else if($paymentMethod['payment_option']=='google-pay'){
-        //     $url=url('/google-pay-payment');
-        // }else{
-        //     $url=url('/cod');
-        // }
-        // $data = compact('url');
+    public function OrderForm(){
         return view('gym-frontend/order-form');
     }
     public function COD(Request $request){
