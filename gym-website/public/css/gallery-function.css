@@ -1,0 +1,28 @@
+.col-md-6.img-active{
+width:100%;
+transition: 1s ease-in-out;
+}
+.col-md-6{
+    transition: 2s ease-in-out;
+}
+body .col-md-6.img-active{
+    background-color: black;
+}
+.img-show{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -38px;
+    transition: 2s ease-in-out;
+    position: relative;
+  
+  }
+  #viewer-text{
+      text-align: center;
+      text-decoration: none;
+      color:white;
+      cursor: pointer;
+      background-color:red;
+      opacity: 0.8;
+      width: 100%;
+  }

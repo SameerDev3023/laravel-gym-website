@@ -20,6 +20,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="{{URL::asset('css/gallery-function.css')}}"
+    />
 @push('title')
     <title>Gallery</title>
   </head>
@@ -91,17 +95,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
-    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
-    ></script> -->
-
-    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+  <script src="{{URL::asset('js/gallery.js')}}"></script>
   </body>
 </html>
 
