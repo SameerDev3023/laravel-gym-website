@@ -21,8 +21,12 @@
       @elseif($orders['total_order_price']==8000)
       {{'6 Month Package'}}
       @else
-      {{'3 Month Package'}}
-      @endif
+      {{'3 Month Package '}}
+      @endif 
+
+
+
+      
       </td>
       <td>{{$orders['total_order_price']}}</td>
       <td>{{$orders['created_at']}}</td>
