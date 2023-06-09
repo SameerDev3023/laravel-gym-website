@@ -10,6 +10,7 @@ class Get_Orders extends Controller
     //
     public function GetOrder(){
         $email = session()->get('user_email');
+        session()->put('user_email',$email);
         $CustomersOrders = Get_Orders_Customer::where('customer_email', $email)->get();
         $data = compact('CustomersOrders');
 
