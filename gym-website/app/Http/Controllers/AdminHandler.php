@@ -20,7 +20,8 @@ class AdminHandler extends Controller
             if($email!==''){
                 session()->put('user_email',$email);
             }else{
-                session()->forget('user_email');
+                session()->forget('user_email'); 
+                
             }
                 if ($user) {
                     if ($password === $user->password) {
