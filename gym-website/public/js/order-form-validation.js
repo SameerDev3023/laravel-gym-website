@@ -14,7 +14,7 @@ $(document).ready(function () {
             InputValue = $(this).find("input").val();
             let NumberInput = $("#customer_number").val();
             console.log(NumberInput)
-            if (InputValue == "" ) {
+            if (InputValue == ""  ) {
                 e.preventDefault();
             }
             let labelId = inputName + "_error_msg";

@@ -58,6 +58,8 @@ class OrderHandler extends Controller
          $UserOrder->payments_status ="pending" ;
          $UserOrder->total_order_price = session()->get('total_price') ;
          $UserOrder->save();
+
+         shopping_bag::truncate();
         return view('gym-frontend/COD-Success');
     }
 }
