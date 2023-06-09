@@ -64,8 +64,6 @@
             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             <?php
             $cartValue = session()->get('cart_data');
-          
-        
             ?>
            <h6>{{$cartValue}}</h6>
           </a>

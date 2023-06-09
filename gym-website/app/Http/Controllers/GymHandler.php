@@ -19,6 +19,9 @@ class GymHandler extends Controller
         return view('gym-frontend/about');
 }
 public function packages(){
+    session()->forget('user_email');
+        $count = shopping_bag::count();
+        session()->put('cart_data',$count);
     return view('gym-frontend/packages');
 }
 public function contact(){

@@ -4,30 +4,40 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Member Ship</th>
+      <th scope="col">Price</th>
+      <th scope="col">starting Date</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    @foreach($CustomersOrders as $orders)
+    @if(is_null($orders))
+      {{''}}
+      @else
+      <tr>
+      <td>
+      @if($orders['total_order_price']==12000)
+      {{'12 Month Package'}}
+      @elseif($orders['total_order_price']==8000)
+      {{'6 Month Package'}}
+      @else
+      {{'3 Month Package'}}
+      @endif
+      </td>
+      <td>{{$orders['total_order_price']}}</td>
+      <td>{{$orders['created_at']}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  
+    @endif
+
+@endforeach
+
+   
+
+   
+
+    
+ 
   </tbody>
 </table>
 @endsection
